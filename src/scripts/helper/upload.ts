@@ -13,17 +13,18 @@ async function fileFromPath(filePath: string): Promise<File> {
   return new File([content], path.basename(filePath), { type });
 }
 
-async function storeNFT(imagePath: string, name: string, description: string): Promise<any> {
+async function storeNFT(imagePath: string, name: string, description: string, speed: number, strength: number, intelligence: number): Promise<any> {
   const image = await fileFromPath(imagePath);
   const nftStorage = new NFTStorage({ token: nft_storage_key });
 
-  return nftStorage.store({ image, name, description });
+  return nftStorage.store({ image, name, description, speed, strength, intelligence });
 }
 
-async function main(imagePath: string, name: string, description: string): Promise<void> {
+async function main(imagePath: string, name: string, description: string, speed: number, strength: number, intelligence: number): Promise<void> {
   try {
-    const result = await storeNFT(imagePath, name, description);
+    const result = await storeNFT(imagePath, name, description, speed, strength, intelligence);
     console.log('NFT stored successfully with CID:', result);
+    return result;
   } catch (err) {
     console.error('Error while creating the NFT:', err);
   }
