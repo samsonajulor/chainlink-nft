@@ -11,7 +11,7 @@ contract RegualrNFT is ERC721URIStorage, Ownable, ERC721Royalty {
     Counters.Counter private _tokenIds;
     event mint(uint256 tokenId, address player, string tokenURI);
 
-    constructor() ERC721("Regular NFT", "Regular") {}
+    constructor() ERC721("NFTProto", "NFTP") {}
 
     function tokenURI(uint256 tokenId)
         public
@@ -41,7 +41,6 @@ contract RegualrNFT is ERC721URIStorage, Ownable, ERC721Royalty {
 
     function devMint(string memory _tokenURI)
         public
-        onlyOwner
         returns (uint256)
     {
         uint256 newItemId = _tokenIds.current();
