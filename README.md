@@ -97,6 +97,9 @@ This Contract was deployed to sepolia testnet via the following commands
 #### Mint the nft with the contract to sepolia testnet
 - RUN `npx hardhat run scripts/mintNFT.ts --network sepolia`
 
+#### Interact the nft with the contract to sepolia testnet
+- RUN `npx hardhat run scripts/interact.ts --network sepolia`
+
 #### Find the minted nft here
 [minted nft on opensea testnet]()
 
