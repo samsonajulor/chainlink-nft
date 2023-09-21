@@ -6,21 +6,13 @@ const nftTokenUris = [
   'ipfs://bafyreifoygwvwcfpm4dsxaab3cisewkpxsyvh22gehiomneadiyln3c5ri/metadata.json',
 ];
 
-// (
-//         address vrfCoordinatorV2,
-//         uint64 suscriptionId,
-//         bytes32 gasLane,
-//         uint32 callbackGasLimit,
-//         string[3] memory nftTokenUris
-//     )
-
-// nftProto contract deployed at: 0xD4C42e502669947139D736b693C97b82D4d01F48
+// nftProto contract deployed at: 0x57Df052B630Dd1a713C91CB87FAE9fC03AA3182a
 async function main() {
-  const subscriptionId: string = "8735";
+  const subscriptionId: string = '14245';
   const callBackGasLimit: number = 500000;
   const gasLane: string = "0x79d3d8832d904592c0bf9818b621522c988bb8b0c05cdc3b15aea1b6e8db0c15";
-  const vrf_coordinator_v2: string = '0xd4c42e502669947139d736b693c97b82d4d01f48';
-  const link_token: string = "0x326C977E6efc84E512bB9C30f76E30c160eD06FB";
+  const vrf_coordinator_v2: string = '0x2ca8e0c643bde4c2e08ab1fa0da3401adad7734d';
+  const link_token: string = '0x326c977e6efc84e512bb9c30f76e30c160ed06fb';
 
   const NFTProto = await ethers.deployContract('ProtoRandomNFT', [
     vrf_coordinator_v2,

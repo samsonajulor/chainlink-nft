@@ -18,6 +18,7 @@ const config: HardhatUserConfig = {
   etherscan: {
     apiKey: {
       sepolia: etherscan_api_key,
+      goerli: etherscan_api_key,
     },
   },
 };

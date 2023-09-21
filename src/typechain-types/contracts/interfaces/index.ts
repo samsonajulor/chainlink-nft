@@ -2,3 +2,4 @@
 /* tslint:disable */
 /* eslint-disable */
 export type { INFTProto } from "./INFTProto";
+export type { IProtoRandomNFT } from "./IProtoRandomNFT";

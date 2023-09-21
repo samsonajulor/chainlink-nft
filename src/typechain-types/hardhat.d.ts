@@ -86,9 +86,9 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.INFTProto__factory>;
     getContractFactory(
-      name: "RegualrNFT",
+      name: "IProtoRandomNFT",
       signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.RegualrNFT__factory>;
+    ): Promise<Contracts.IProtoRandomNFT__factory>;
     getContractFactory(
       name: "ProtoRandomNFT",
       signerOrOptions?: ethers.Signer | FactoryOptions
@@ -189,10 +189,10 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.INFTProto>;
     getContractAt(
-      name: "RegualrNFT",
+      name: "IProtoRandomNFT",
       address: string | ethers.Addressable,
       signer?: ethers.Signer
-    ): Promise<Contracts.RegualrNFT>;
+    ): Promise<Contracts.IProtoRandomNFT>;
     getContractAt(
       name: "ProtoRandomNFT",
       address: string | ethers.Addressable,
@@ -277,9 +277,9 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.INFTProto>;
     deployContract(
-      name: "RegualrNFT",
+      name: "IProtoRandomNFT",
       signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.RegualrNFT>;
+    ): Promise<Contracts.IProtoRandomNFT>;
     deployContract(
       name: "ProtoRandomNFT",
       signerOrOptions?: ethers.Signer | DeployContractOptions
@@ -380,10 +380,10 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.INFTProto>;
     deployContract(
-      name: "RegualrNFT",
+      name: "IProtoRandomNFT",
       args: any[],
       signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.RegualrNFT>;
+    ): Promise<Contracts.IProtoRandomNFT>;
     deployContract(
       name: "ProtoRandomNFT",
       args: any[],

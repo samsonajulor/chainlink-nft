@@ -44,8 +44,8 @@ export type { IERC165 } from "./@openzeppelin/contracts/utils/introspection/IERC
 export { IERC165__factory } from "./factories/@openzeppelin/contracts/utils/introspection/IERC165__factory";
 export type { INFTProto } from "./contracts/interfaces/INFTProto";
 export { INFTProto__factory } from "./factories/contracts/interfaces/INFTProto__factory";
-export type { RegualrNFT } from "./contracts/NFTProto.sol/RegualrNFT";
-export { RegualrNFT__factory } from "./factories/contracts/NFTProto.sol/RegualrNFT__factory";
+export type { IProtoRandomNFT } from "./contracts/interfaces/IProtoRandomNFT";
+export { IProtoRandomNFT__factory } from "./factories/contracts/interfaces/IProtoRandomNFT__factory";
 export type { ProtoRandomNFT } from "./contracts/RandomNFTProto.sol/ProtoRandomNFT";
 export { ProtoRandomNFT__factory } from "./factories/contracts/RandomNFTProto.sol/ProtoRandomNFT__factory";
 export type { VRFv2Consumer } from "./contracts/VRFv2Consumer";

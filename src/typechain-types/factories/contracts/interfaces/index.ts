@@ -2,3 +2,4 @@
 /* tslint:disable */
 /* eslint-disable */
 export { INFTProto__factory } from "./INFTProto__factory";
+export { IProtoRandomNFT__factory } from "./IProtoRandomNFT__factory";

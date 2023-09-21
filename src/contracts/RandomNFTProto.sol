@@ -14,6 +14,8 @@ error ProtoRandomNFT_TransferFailed();
 contract ProtoRandomNFT is ERC721URIStorage, VRFConsumerBaseV2, Ownable {
     // NFT Properties
     enum Props {
+        name,
+        description,
         speed,
         strength,
         intelligence
