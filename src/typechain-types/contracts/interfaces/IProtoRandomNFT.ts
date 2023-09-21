@@ -139,7 +139,7 @@ export interface IProtoRandomNFT extends BaseContract {
 
   getTokenCounter: TypedContractMethod<[], [bigint], "view">;
 
-  requestNft: TypedContractMethod<[], [bigint], "payable">;
+  requestNft: TypedContractMethod<[], [bigint], "nonpayable">;
 
   withdraw: TypedContractMethod<[], [void], "nonpayable">;
 
@@ -164,7 +164,7 @@ export interface IProtoRandomNFT extends BaseContract {
   ): TypedContractMethod<[], [bigint], "view">;
   getFunction(
     nameOrSignature: "requestNft"
-  ): TypedContractMethod<[], [bigint], "payable">;
+  ): TypedContractMethod<[], [bigint], "nonpayable">;
   getFunction(
     nameOrSignature: "withdraw"
   ): TypedContractMethod<[], [void], "nonpayable">;

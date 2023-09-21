@@ -6,7 +6,7 @@ const nftTokenUris = [
   'ipfs://bafyreifoygwvwcfpm4dsxaab3cisewkpxsyvh22gehiomneadiyln3c5ri/metadata.json',
 ];
 
-// nftProto contract deployed at: 0xd77121C0e929642A5643A040b73A9a6e6B866D15
+// nftProto contract deployed at: 0x885b2F2C61774d09067071a088798170609FFFEB
 async function main() {
   const subscriptionId: string = '14245';
   const callBackGasLimit: number = 500000;

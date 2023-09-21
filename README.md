@@ -90,7 +90,7 @@ This Contract was deployed to sepolia testnet via the following commands
 - RUN `npx hardhat run scripts/deployRandomNFTProto.ts --network sepolia`
 
 #### Verifying the tokens
-- RUN `npx hardhat verify --contract contracts/RandomNFTProto.sol:ProtoRandomNFT  --network sepolia 0xd77121C0e929642A5643A040b73A9a6e6B866D15` to verify the ProtoRandomNFT
+- RUN `npx hardhat verify --contract contracts/RandomNFTProto.sol:ProtoRandomNFT  --network sepolia 0x885b2F2C61774d09067071a088798170609FFFEB` to verify the ProtoRandomNFT
 - verification url: [nftProto url]()
 
 

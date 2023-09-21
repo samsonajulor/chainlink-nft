@@ -994,8 +994,8 @@
       ]
     },
     "/home/samsonajulor/github/web3/chainlink-nft/src/contracts/interfaces/IProtoRandomNFT.sol": {
-      "lastModificationDate": 1694706829496,
-      "contentHash": "c027ed1dc2698b2b58cb204d8e775b36",
+      "lastModificationDate": 1695323037984,
+      "contentHash": "14e1568c1442cd0bf6be432e1f01a7ba",
       "sourceName": "contracts/interfaces/IProtoRandomNFT.sol",
       "solcConfig": {
         "version": "0.8.13",

@@ -1,7 +1,7 @@
 import { ethers } from 'hardhat';
 
 async function main() {
-  const NFTProtoAddress = '0x57Df052B630Dd1a713C91CB87FAE9fC03AA3182a';
+  const NFTProtoAddress = '0x885b2F2C61774d09067071a088798170609FFFEB';
 
   const NFTProtoContract = await ethers.getContractAt('IProtoRandomNFT', NFTProtoAddress);
 

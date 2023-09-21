@@ -96,7 +96,7 @@ const _abi = [
         type: "uint256",
       },
     ],
-    stateMutability: "payable",
+    stateMutability: "nonpayable",
     type: "function",
   },
   {
