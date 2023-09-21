@@ -82,20 +82,20 @@ Returns the current token counter, indicating the total number of minted NFTs.
 This contract is not licensed, and its usage is at the discretion of the deploying entity.
 
 ## Usage
-This Contract was deployed to goerli testnet via the following commands
+This Contract was deployed to sepolia testnet via the following commands
 
 - RUN `cd src`
 - RUN `npx hardhat compile`
-- RUN `npx hardhat run scripts/uploadNFTToIPFS.ts --network goerli`
-- RUN `npx hardhat run scripts/deployRandomNFTProto.ts --network goerli`
+- RUN `npx hardhat run scripts/uploadNFTToIPFS.ts --network sepolia`
+- RUN `npx hardhat run scripts/deployRandomNFTProto.ts --network sepolia`
 
 #### Verifying the tokens
-- RUN `npx hardhat verify --contract contracts/RandomNFTProto.sol:ProtoRandomNFT  --network goerli 0xe638fa85dE07E70d5ce621cF3aE2A0c2C2465f75` to verify the ethTok
+- RUN `npx hardhat verify --contract contracts/RandomNFTProto.sol:ProtoRandomNFT  --network sepolia 0xd77121C0e929642A5643A040b73A9a6e6B866D15` to verify the ProtoRandomNFT
 - verification url: [nftProto url]()
 
 
-#### Mint the nft with the contract to goerli testnet
-- RUN `npx hardhat run scripts/mintNFT.ts --network goerli`
+#### Mint the nft with the contract to sepolia testnet
+- RUN `npx hardhat run scripts/mintNFT.ts --network sepolia`
 
 #### Find the minted nft here
 [minted nft on opensea testnet]()

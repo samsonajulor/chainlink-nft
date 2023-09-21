@@ -736,8 +736,8 @@
       ]
     },
     "/home/samsonajulor/github/web3/chainlink-nft/src/contracts/RandomNFTProto.sol": {
-      "lastModificationDate": 1694706800542,
-      "contentHash": "697128e75ba5f3e6997e0c951b87ead9",
+      "lastModificationDate": 1695322208521,
+      "contentHash": "8efd462a5bdd39792a2e481a33b6993c",
       "sourceName": "contracts/RandomNFTProto.sol",
       "solcConfig": {
         "version": "0.8.13",

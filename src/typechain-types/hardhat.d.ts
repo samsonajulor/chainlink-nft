@@ -82,10 +82,6 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.IERC165__factory>;
     getContractFactory(
-      name: "INFTProto",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.INFTProto__factory>;
-    getContractFactory(
       name: "IProtoRandomNFT",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.IProtoRandomNFT__factory>;
@@ -184,11 +180,6 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.IERC165>;
     getContractAt(
-      name: "INFTProto",
-      address: string | ethers.Addressable,
-      signer?: ethers.Signer
-    ): Promise<Contracts.INFTProto>;
-    getContractAt(
       name: "IProtoRandomNFT",
       address: string | ethers.Addressable,
       signer?: ethers.Signer
@@ -272,10 +263,6 @@ declare module "hardhat/types/runtime" {
       name: "IERC165",
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.IERC165>;
-    deployContract(
-      name: "INFTProto",
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.INFTProto>;
     deployContract(
       name: "IProtoRandomNFT",
       signerOrOptions?: ethers.Signer | DeployContractOptions
@@ -374,11 +361,6 @@ declare module "hardhat/types/runtime" {
       args: any[],
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.IERC165>;
-    deployContract(
-      name: "INFTProto",
-      args: any[],
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.INFTProto>;
     deployContract(
       name: "IProtoRandomNFT",
       args: any[],

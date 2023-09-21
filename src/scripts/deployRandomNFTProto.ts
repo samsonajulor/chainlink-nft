@@ -6,11 +6,11 @@ const nftTokenUris = [
   'ipfs://bafyreifoygwvwcfpm4dsxaab3cisewkpxsyvh22gehiomneadiyln3c5ri/metadata.json',
 ];
 
-// nftProto contract deployed at: 0x57Df052B630Dd1a713C91CB87FAE9fC03AA3182a
+// nftProto contract deployed at: 0xd77121C0e929642A5643A040b73A9a6e6B866D15
 async function main() {
   const subscriptionId: string = '14245';
   const callBackGasLimit: number = 500000;
-  const gasLane: string = "0x79d3d8832d904592c0bf9818b621522c988bb8b0c05cdc3b15aea1b6e8db0c15";
+  const gasLane: string = "0x474e34a077df58807dbe9c96d3c009b23b3c6d0cce433e59bbf5b34f823bc56c"; // for the sepolia testnet
   const vrf_coordinator_v2: string = '0x2ca8e0c643bde4c2e08ab1fa0da3401adad7734d';
   const link_token: string = '0x326c977e6efc84e512bb9c30f76e30c160ed06fb';
 

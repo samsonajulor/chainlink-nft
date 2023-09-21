@@ -447,7 +447,7 @@ export interface ProtoRandomNFT extends BaseContract {
     "view"
   >;
 
-  requestNft: TypedContractMethod<[], [bigint], "payable">;
+  requestNft: TypedContractMethod<[], [bigint], "nonpayable">;
 
   "safeTransferFrom(address,address,uint256)": TypedContractMethod<
     [from: AddressLike, to: AddressLike, tokenId: BigNumberish],
@@ -559,7 +559,7 @@ export interface ProtoRandomNFT extends BaseContract {
   ): TypedContractMethod<[arg0: BigNumberish], [string], "view">;
   getFunction(
     nameOrSignature: "requestNft"
-  ): TypedContractMethod<[], [bigint], "payable">;
+  ): TypedContractMethod<[], [bigint], "nonpayable">;
   getFunction(
     nameOrSignature: "safeTransferFrom(address,address,uint256)"
   ): TypedContractMethod<

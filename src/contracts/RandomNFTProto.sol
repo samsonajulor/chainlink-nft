@@ -26,7 +26,7 @@ contract ProtoRandomNFT is ERC721URIStorage, VRFConsumerBaseV2, Ownable {
     uint64 private immutable _suscriptionId;
     bytes32 private immutable _gasLane;
     uint32 private immutable _callbackGasLimit;
-    uint16 private constant REQUEST_CONFIRMATIONS = 3;
+    uint16 private constant REQUEST_CONFIRMATIONS = 1;
     uint32 private constant NUM_WORDS = 1;
 
     // NFT Variables
@@ -40,6 +40,21 @@ contract ProtoRandomNFT is ERC721URIStorage, VRFConsumerBaseV2, Ownable {
     // Events
     event NftRequested(uint256 indexed requestId, address requester);
     event NftMinted(Props props, address minter);
+
+    // easy constructor
+    // correct address without checksum: 0x2Ca8E0C643bDe4C2E08ab1fA0da3401AdAD7734D
+    // constructor(
+    // )
+    //     VRFConsumerBaseV2(0x2Ca8E0C643bDe4C2E08ab1fA0da3401AdAD7734D)
+    //     ERC721("NFT Proto with Randomness", "NPR")
+    // {
+    //     vrfCoordinator = VRFCoordinatorV2Interface(0x2Ca8E0C643bDe4C2E08ab1fA0da3401AdAD7734D);
+    //     _gasLane = 0x474e34a077df58807dbe9c96d3c009b23b3c6d0cce433e59bbf5b34f823bc56c;
+    //     _suscriptionId = 14245;
+    //     _callbackGasLimit = 500000;
+    //     _initializeContract([ "ipfs://bafyreifbig22s4jhbehclwggxdzi3tevwclj56utjetlhpxc4y26aowaui/metadata.json", "ipfs://bafyreid6yivkwmrmxt5p4ofzrelcnutyjroo6wllrxw6oqaqdz3e5p6sji/metadata.json",   "ipfs://bafyreifoygwvwcfpm4dsxaab3cisewkpxsyvh22gehiomneadiyln3c5ri/metadata.json"]);
+    //     tokenCounter = 0;
+    // }
 
     constructor(
         address vrfCoordinatorV2,
@@ -60,7 +75,7 @@ contract ProtoRandomNFT is ERC721URIStorage, VRFConsumerBaseV2, Ownable {
     }
 
     // Request NFT based on the requestID
-    function requestNft() public payable returns (uint256 requestId) {
+    function requestNft() public returns (uint256 requestId) {
         requestId = vrfCoordinator.requestRandomWords(
             _gasLane,
             _suscriptionId,
@@ -96,11 +111,11 @@ contract ProtoRandomNFT is ERC721URIStorage, VRFConsumerBaseV2, Ownable {
 
     // Initialize Contract
 
-    function _initializeContract(string[3] memory nftTokenUris) private {
+    function _initializeContract(string[3] memory nftTokenUris_) private {
         if (isInitialized) {
             revert ProtoRandomNFT_AllreadyInitialized();
         }
-        nftTokenUris = nftTokenUris;
+        nftTokenUrisStorage = nftTokenUris_;
         isInitialized = true;
     }
 
@@ -111,12 +126,12 @@ contract ProtoRandomNFT is ERC721URIStorage, VRFConsumerBaseV2, Ownable {
         returns (Props)
     {
         uint256 totalSum = 0;
-        uint256[3] memory changeArray = getChanceArray();
-        for (uint256 i = 0; i < changeArray.length; i++) {
-            if (moddedRng >= totalSum && moddedRng < changeArray[i]) {
+        uint256[3] memory chanceArray = getChanceArray();
+        for (uint256 i = 0; i < chanceArray.length; i++) {
+            if (moddedRng >= totalSum && moddedRng < chanceArray[i]) {
                 return Props(i);
             }
-            totalSum += changeArray[i];
+            totalSum += chanceArray[i];
         }
         revert ProtoRandomNFT_RangeOutOfBounds();
     }
